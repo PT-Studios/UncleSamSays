@@ -1,0 +1,319 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>Philbrook Museum of Art Tulsa, OK - Hope & Fear, June 24-November 12: Make Your Own WWI Poster</title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="731">
+        <meta name="viewport" content="width=731">
+        <meta http-equiv="cleartype" content="on">
+
+        <!-- iPad and iPad mini (with @2× display) iOS ≥ 8 -->
+        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/touch/apple-touch-icon-180x180-precomposed.png">
+        <!-- iPad 3+ (with @2× display) iOS ≥ 7 -->
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/touch/apple-touch-icon-152x152-precomposed.png">
+        <!-- iPad (with @2× display) iOS ≤ 6 -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <!-- iPhone (with @2× and @3 display) iOS ≥ 7 -->
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/touch/apple-touch-icon-120x120-precomposed.png">
+        <!-- iPhone (with @2× display) iOS ≤ 6 -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7 -->
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/touch/apple-touch-icon-76x76-precomposed.png">
+        <!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6 -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <!-- Android Stock Browser and non-Retina iPhone and iPod Touch -->
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <!-- Fallback for everything else -->
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+        <!--
+            Chrome 31+ has home screen icon 192×192 (the recommended size for multiple resolutions).
+            If it’s not defined on that size it will take 128×128.
+        -->
+        <link rel="icon" sizes="192x192" href="img/touch/touch-icon-192x192.png">
+        <link rel="icon" sizes="128x128" href="img/touch/touch-icon-128x128.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+        <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
+        <!--
+        <link rel="canonical" href="http://www.example.com/" >
+        -->
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <!--
+        <meta name="mobile-web-app-capable" content="yes">
+        -->
+
+        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+        <!--
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        -->
+
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!---<link rel="stylesheet" type="text/css" href="/includes/css/main.css">-->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-31369102-1', 'auto');
+		ga('send', 'pageview');
+
+		</script>
+
+    </head>
+    <body>
+
+        <!--Preload fonts-->
+		<div class="font_preload" style="opacity: 0">
+			<span style="font-family: 'BebasKai'"></span>
+		</div>
+
+		<font id="BebasKai">
+			<font-face font-family="BebasKai" />
+		</font>
+
+		<!--Menu-->
+		<div class="container">
+			<div id="menu">
+				<!--<div class="logo"></div>-->
+				<div id="row">
+					<div class="form">
+						<LABEL FOR="imgTxt">I want YOU...</LABEL>
+						<input type="text" placeholder="FOR U.S. ARMY" id="imgTxt" maxlength="21" size="21"/>
+					</div>
+					<div class="button-holder">
+						<div id="update" class="button" onclick="update();">Update</div>
+					</div>
+				</row>
+			</div>
+		</div>
+
+		<!--Canvas-->
+		<canvas id="canvas" width=731 height=1024></canvas>
+
+		<!--Save Menu-->
+		<div class="container">
+			<div id="menu">
+				<div id="row" style="display:block;">
+					<div class="button-holder" style="text-align:center;display:block;">
+						<div id="save" class="button" style="display:block;" onclick="share();">Save</div>
+						<a class="button" style="display:block;margin-top: 1em;" href="https://philbrook.org/explore/exhibitions/hope-fear" target="_blank">Visit Philbrook</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="modal" class="modal">
+			<div class="modal-content clearfix">
+				<span class="close">&times;</span>
+				<div id="row">
+					<!--<img src="/includes/img/detail-poster.jpg" alt="Hope & Fear: June 24-November 12, Philbrook Museum of Art - Tulsa, OK" width="223">-->
+					<div class="text-holder">
+						<h2><span class="bebas">WE WANT YOU</span> to share <i>your</i> poster!</h2>
+						<p>Share on social media with hashtags: <a href="https://www.instagram.com/explore/tags/ww100/?hl=en" target="_blank">#ww100</a> <a href="https://www.instagram.com/explore/tags/unclesamsays/?hl=en" target="_blank">#unclesamsays</a> <a href="https://www.instagram.com/explore/tags/philbrook/?hl=en" target="_blank">#philbrook</a></p>
+					</div>
+					<div class="button-holder" style="text-align:center;display:block;">
+						<div id="save" class="button" style="text-align:center;display:block;" onclick="download();">Save & Share</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+
+			window.onpageshow = function(event) {
+				if (event.persisted) {
+					window.location.reload() 
+				}
+			};
+			
+			function download(){
+				var canvas = document.getElementById("canvas"), context = canvas.getContext('2d');
+				canvas.toBlob(function(blob) {
+					saveAs(blob, "HopeAndFear.png");
+				});
+			}
+
+			function share(){
+				var modal = document.getElementById('modal');
+				modal.style.display = "block";
+				update();
+			}
+
+			function update(){
+				make_base();
+				//set_VP();
+			}
+
+			function set_VP() {
+				var mvp = document.getElementById('pViewport');
+				mvp.setAttribute('content','width=731');
+			}
+
+			function OverlayOn() {
+				document.getElementById("overlay").style.display = "block";
+			}
+
+			function OverlayOff() {
+				document.getElementById("overlay").style.display = "none";
+			}
+
+			function make_base()
+			{
+				context = canvas.getContext('2d')
+				base_image = new Image();
+				base_image.src = '/includes/img/iwantu.jpg';
+				context.font = "96px BebasKai";
+				context.textAlign = "center";
+				context.lineWidth = 2;
+				context.strokeStyle = '#A52A2A';
+				context.fillStyle = 'black';
+
+				base_image.onload = function(){
+					context.drawImage(base_image, 0, 0);
+
+					//context.fillText("I WANT YOU", canvas.width/2, 824);
+					//context.strokeText("I WANT YOU", canvas.width/2, 824);
+
+					context.font = "128px BebasKai";
+					context.strokeStyle = 'BLACK';
+					context.fillStyle = '#A52A2A';
+					context.fillText("YOU", canvas.width/2+120, 824);
+					context.strokeText("YOU", canvas.width/2+120, 824);
+
+					context.font = "96px BebasKai";
+					context.strokeStyle = '#A52A2A';
+					context.fillStyle = 'black';
+					context.fillText("I WANT", canvas.width/2-80, 824);
+					context.strokeText("I WANT", canvas.width/2-80, 824);
+
+
+					if (typeof imgTxt.value === 'undefined' || !imgTxt.value)
+					{
+						context.fillText("For U.S. Army", canvas.width/2, 824+96);
+						context.strokeText("For U.S. Army", canvas.width/2, 824+96);
+					} else {
+						context.fillText(imgTxt.value, canvas.width/2, 824+96);
+						context.strokeText(imgTxt.value, canvas.width/2, 824+96);
+					}
+				}
+			}
+
+			window.onload = function() {
+				var canvas = document.getElementById("canvas"), context = canvas.getContext('2d');
+				var imgTxt = document.getElementById('imgTxt');
+
+				var modal = document.getElementById('modal');
+				var span = document.getElementsByClassName("close")[0];
+
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+				
+				// resize the canvas to fill browser window dynamically
+		    	//window.addEventListener('resize', resizeCanvas, false);
+
+				document.getElementById("imgTxt")
+					.addEventListener("keyup", function(event) {
+					event.preventDefault();
+					if (event.keyCode == 13) {
+						document.getElementById("update").click();
+					}
+				});
+
+				function resizeCanvas() {
+					canvas.width = window.innerWidth;
+					canvas.height = window.innerHeight;
+					make_base();
+				}
+
+				function make_base()
+				{
+					base_image = new Image();
+					base_image.src = '/includes/img/iwantu.jpg';
+					context.font = "96px BebasKai";
+					context.textAlign = "center";
+					context.lineWidth = 2;
+					context.strokeStyle = '#A52A2A';
+					context.fillStyle = 'black';
+
+					anyFont = new Font();
+					anyFont.fontFamily = "BebasKai";
+					anyFont.src = anyFont.fontFamily;
+
+					anyFont.onload = function () {
+						console.log("font loaded");
+					}
+
+					base_image.onload = function(){
+						context.drawImage(base_image, 0, 0);
+
+						//context.fillText("I WANT YOU", canvas.width/2, 824);
+						//context.strokeText("I WANT YOU", canvas.width/2, 824);
+
+						context.font = "128px BebasKai";
+						context.strokeStyle = 'BLACK';
+						context.fillStyle = '#A52A2A';
+						context.fillText("YOU", canvas.width/2+120, 824);
+						context.strokeText("YOU", canvas.width/2+120, 824);
+
+						context.font = "96px BebasKai";
+						context.strokeStyle = '#A52A2A';
+						context.fillStyle = 'black';
+						context.fillText("I WANT", canvas.width/2-80, 824);
+						context.strokeText("I WANT", canvas.width/2-80, 824);
+
+						if (typeof imgTxt.value === 'undefined' || !imgTxt.value)
+						{
+							context.fillText("For U.S. Army", canvas.width/2, 824+96);
+							context.strokeText("For U.S. Army", canvas.width/2, 824+96);
+						} else {
+							context.fillText(imgTxt.value, canvas.width/2, 824+96);
+							context.strokeText(imgTxt.value, canvas.width/2, 824+96);
+						}
+					}
+				}
+
+				//resizeCanvas();
+				setTimeout(function() {make_base();}, 1000);
+
+			}
+		</script>
+
+		<script type="text/javascript"></script>
+
+		<script src="/includes/js/Font.js"></script>
+		<script src="/includes/js/canvas-toBlob.js"></script>
+		<script src="/includes/js/FileSaver.min.js"></script>
+
+        <script src="js/vendor/jquery-2.1.3.min.js"></script>
+        <script src="js/helper.js"></script>
+        <script src="js/main.js"></script>
+        
+    </body>
+</html>

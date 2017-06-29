@@ -1,0 +1,87 @@
+body {
+	background-image: url("/includes/img/tile-bg.jpg");
+	background-size: auto 20%;
+	background-position: center;
+	background-color: #cccccc;
+	margin: 0;
+}
+
+@font-face {
+	font-family: 'BebasKai';
+	src: url('/includes/fonts/BebasKai.eot');
+	src: local('Bebas Kai Regular'), local('BebasKai'), local('Bebas Kai'),
+		url('/includes/fonts/BebasKai.eot?#iefix') format('embedded-opentype'),
+		url('/includes/fonts/BebasKai.woff2') format('woff2'),
+		url('/includes/fonts/BebasKai.woff') format('woff'),
+		url('/includes/fonts/BebasKai.ttf') format('truetype'),
+		url('/includes/fonts/BebasKai-Regular.otf') format('opentype'),
+		url('/includes/fonts/BebasKai.svg#BebasKai') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+canvas {
+	margin: 0 auto;
+	display: block;
+	font-family: 'BebasKai';
+}
+
+#menu {
+	font-family: Arial;
+	font-size: 2em;
+	padding: 1em 1em;
+	background-color: #fefefe;
+	border: 1em solid #142347;
+	position: fixed;
+	right: 0;
+	top: 0;
+	text-align: center;
+}
+
+#menu .logo {
+	background-image: url("/includes/img/pb-logo-200.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	min-height: 57px;
+	margin-bottom: 1em;
+}
+
+#menu .button {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 1em;
+	display: inline-block;
+	padding: 10px;
+	margin-top: 1em;
+	background-color: #A52A2A;
+	color: white;
+	cursor: pointer;
+	border: 6px solid #A52A2A;
+}
+
+#menu .form label {
+	display: block;
+	text-align: left;
+	color: #2d2d2d;
+	margin-bottom: 4px;
+}
+
+#menu .form input {
+	font-size: 1em;
+	padding: 4px 8px;
+	display: block;
+	text-align: left;
+	color: #2d2d2d;
+	margin-bottom: 4px;
+}
+
+#menu .button:hover {
+	background-color: #fefefe;
+	color: #A52A2A;
+}
+
+#save.button {
+	margin-left: .5em;
+
+}

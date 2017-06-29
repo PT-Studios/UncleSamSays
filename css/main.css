@@ -1,0 +1,416 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+a {
+    color: #00e;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+   Author's Custom styles
+   ========================================================================== */
+
+
+body {
+  background-image: url("/includes/img/tile-bg.jpg");
+  background-size: auto 20%;
+  background-position: center;
+  background-color: #cccccc;
+}
+
+@font-face {
+  font-family: 'BebasKai';
+  src: url('/includes/fonts/BebasKai.eot');
+  src: local('Bebas Kai Regular'), local('BebasKai'), local('Bebas Kai'),
+    url('/includes/fonts/BebasKai.eot?#iefix') format('embedded-opentype'),
+    url('/includes/fonts/BebasKai.woff2') format('woff2'),
+    url('/includes/fonts/BebasKai.woff') format('woff'),
+    url('/includes/fonts/BebasKai.ttf') format('truetype'),
+    url('/includes/fonts/BebasKai-Regular.otf') format('opentype'),
+    url('/includes/fonts/BebasKai.svg#BebasKai') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+canvas {
+  margin: 0 auto;
+  display: block;
+  font-family: 'BebasKai';
+}
+
+.container {
+  width: 100%;
+  min-width: 731px;
+  margin: 0 auto;
+}
+
+#row {
+  display: table-row;
+}
+
+#menu {
+  font-family: 'BebasKai';
+  font-size: 2em;
+  background-color: #fefefe;
+  padding: 1em 1em;
+  border: 1em solid #142347;
+  text-align: left;
+}
+
+#menu .logo {
+  background-image: url("/includes/img/pb-logo-200.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 200px;
+  min-height: 57px;
+  margin-bottom: 1em;
+  display: block;
+}
+
+.button-holder {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.button-holder .button {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 1em;
+  display: inline-block;
+  padding: 18px;
+  background-color: #A52A2A;
+  color: white;
+  cursor: pointer;
+  border: 8px solid #A52A2A;
+  text-align: center;
+}
+
+.button {
+  text-decoration: none;
+}
+
+#menu .form {
+  display: table-cell;
+}
+
+#menu .form label {
+  display: block;
+  text-align: left;
+  color: #2d2d2d;
+  margin-bottom: -1px;
+}
+
+#menu .form input {
+  font-size: 1em;
+  padding: 4px 8px;
+  display: block;
+  text-align: left;
+  color: #2d2d2d;
+  margin-bottom: 4px;
+}
+
+#menu .button:hover {
+  background-color: #fefefe;
+  color: #A52A2A;
+}
+
+#save.button {
+  /*margin-left: .5em;*/
+}
+
+
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 15% from the top and centered */
+  width: 80%; /* Could be more or less, depending on screen size */
+  min-width: 731px;
+  font-size: 2em;
+  position: relative;
+}
+
+.modal-content img {
+  display: inline-block;
+}
+
+.text-holder {
+  padding: 2em 2em 1em 2em;
+}
+
+.text-holder h2{
+  margin-top: 0;
+}
+
+.bebas {
+  font-family: 'BebasKai';
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  right: 25px;
+  top: 0;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* ==========================================================================
+   Author's Responsive styles
+   ========================================================================== */
+
+
+@media screen and (min-width: 840px) {
+
+  .container {
+    max-width: 731px;
+    margin: 0 auto;
+  }
+
+  .modal-content {
+    max-width: 731px;
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    min-width: 731px;
+    font-size: 2em;
+    position: relative;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
